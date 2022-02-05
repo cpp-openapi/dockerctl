@@ -1,0 +1,34 @@
+name: build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest ]
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Get specific version CMake, v3.21.2
+      uses: lukka/get-cmake@v3.21.2
+
+    - uses: actions/setup-java@v2
+      with:
+        distribution: 'microsoft'
+        java-version: '17'
+    
+    - name: CMake configure
+      run: cmake . -B build
+
+    # generated is manually modified for now
+    # - name: CMake generate dockerctl
+    #   run: cmake --build build --target generate-dockerctl
+
+    # TODO: add release build
+    - name: CMake build everything
+      run: cmake --build build --config Debug
+
+    - name: CMake run tests
+      run: ctest -C Debug --test-dir build
