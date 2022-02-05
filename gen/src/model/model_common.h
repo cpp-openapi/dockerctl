@@ -1,9 +1,5 @@
 #pragma once
 
-#ifdef linux
-#undef linux
-#endif
-
 #ifdef OPENAPI_RAPIDJSON
 #include "openapi/json/rapid.h"
 typedef RapidJson Json;
@@ -13,3 +9,6 @@ typedef NlohmannJson Json;
 #endif
 
 #include "openapi/json/macro.h"
+#ifdef linux
+#undef linux
+#endif

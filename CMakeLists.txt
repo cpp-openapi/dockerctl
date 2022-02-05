@@ -29,10 +29,29 @@ list(APPEND CMAKE_MODULE_PATH "${cpp_swagger_SOURCE_DIR}/cmake")
 include(UseOpenAPI)
 
 openapi_generate(
-  generate-dockerctl
+  private-generate-dockerctl
   SPEC "${CMAKE_CURRENT_SOURCE_DIR}/api/swagger.yaml"
   OUTDIR "${CMAKE_CURRENT_SOURCE_DIR}/gen"
 )
+
+# need to modify the generated code to disable macro
+
+if(WIN32)
+add_custom_target(
+    generate-dockerctl
+    DEPENDS private-generate-dockerctl
+    COMMAND cmd /c hack\\append.cmd
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+)
+else()
+add_custom_target(
+    generate-dockerctl
+    DEPENDS private-generate-dockerctl
+    COMMAND sh hack/append.sh
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+)
+endif()
+
 
 enable_testing()
 add_subdirectory(gen/src)

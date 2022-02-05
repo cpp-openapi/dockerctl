@@ -22,9 +22,8 @@ jobs:
     - name: CMake configure
       run: cmake . -B build
 
-    # generated is manually modified for now
-    # - name: CMake generate dockerctl
-    #   run: cmake --build build --target generate-dockerctl
+    - name: CMake generate dockerctl
+      run: cmake --build build --target generate-dockerctl
 
     # TODO: add release build
     - name: CMake build everything
