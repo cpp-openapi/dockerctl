@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(DeviceRequest, Driver, Count, DeviceIDs, Capabilities, Options)
 
 void DeviceRequest::ToJSON(Json & j) const

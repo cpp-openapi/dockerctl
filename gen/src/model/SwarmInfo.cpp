@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(SwarmInfo, NodeID, NodeAddr, LocalNodeState, ControlAvailable, Error, RemoteManagers, Nodes, Managers, Cluster)
 
 void SwarmInfo::ToJSON(Json & j) const

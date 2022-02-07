@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(SystemInfo, ID, Containers, ContainersRunning, ContainersPaused, ContainersStopped, Images, Driver, DriverStatus, DockerRootDir, Plugins, MemoryLimit, SwapLimit, KernelMemory, CpuCfsPeriod, CpuCfsQuota, CPUShares, CPUSet, PidsLimit, OomKillDisable, IPv4Forwarding, BridgeNfIptables, BridgeNfIp6tables, Debug, NFd, NGoroutines, SystemTime, LoggingDriver, CgroupDriver, CgroupVersion, NEventsListener, KernelVersion, OperatingSystem, OSVersion, OSType, Architecture, NCPU, MemTotal, IndexServerAddress, RegistryConfig, GenericResources, HttpProxy, HttpsProxy, NoProxy, Name, Labels, ExperimentalBuild, ServerVersion, ClusterStore, ClusterAdvertise, Runtimes, DefaultRuntime, Swarm, LiveRestoreEnabled, Isolation, InitBinary, ContainerdCommit, RuncCommit, InitCommit, SecurityOptions, ProductLicense, DefaultAddressPools, Warnings)
 
 void SystemInfo::ToJSON(Json & j) const

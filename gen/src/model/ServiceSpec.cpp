@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(ServiceSpec, Name, Labels, TaskTemplate, Mode, UpdateConfig, RollbackConfig, Networks, EndpointSpec)
 
 void ServiceSpec::ToJSON(Json & j) const

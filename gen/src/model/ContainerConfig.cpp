@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(ContainerConfig, Hostname, Domainname, User, AttachStdin, AttachStdout, AttachStderr, ExposedPorts, Tty, OpenStdin, StdinOnce, Env, Cmd, Healthcheck, ArgsEscaped, Image, Volumes, WorkingDir, Entrypoint, NetworkDisabled, MacAddress, OnBuild, Labels, StopSignal, StopTimeout, Shell)
 
 void ContainerConfig::ToJSON(Json & j) const

@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(SwarmSpec, Name, Labels, Orchestration, Raft, Dispatcher, CAConfig, EncryptionConfig, TaskDefaults)
 
 void SwarmSpec::ToJSON(Json & j) const

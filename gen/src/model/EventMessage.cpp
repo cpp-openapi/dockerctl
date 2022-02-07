@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(EventMessage, Type, Action, Actor, scope, time, timeNano)
 
 void EventMessage::ToJSON(Json & j) const

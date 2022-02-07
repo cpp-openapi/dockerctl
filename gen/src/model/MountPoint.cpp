@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(MountPoint, Type, Name, Source, Destination, Driver, Mode, RW, Propagation)
 
 void MountPoint::ToJSON(Json & j) const

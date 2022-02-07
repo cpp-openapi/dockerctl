@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(Limit, NanoCPUs, MemoryBytes, Pids)
 
 void Limit::ToJSON(Json & j) const

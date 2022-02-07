@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(Volume, Name, Driver, Mountpoint, CreatedAt, Status, Labels, Scope, Options, UsageData)
 
 void Volume::ToJSON(Json & j) const

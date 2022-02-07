@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(ErrorDetail, code, message)
 
 void ErrorDetail::ToJSON(Json & j) const

@@ -7,9 +7,8 @@
 #pragma once
 
 
-#include <string>
 #include <optional>
-#include "model_common.h"
+#include "common_json.h"
 
 namespace openapi {
 
@@ -21,10 +20,10 @@ namespace openapi {
  */
 struct ImageSearchResponseItem{
     std::optional<openapi::string_t> description;
-    std::optional<bool> is_underscoreofficial{};
-    std::optional<bool> is_underscoreautomated{};
+    std::optional<bool> is_official{};
+    std::optional<bool> is_automated{};
     std::optional<openapi::string_t> name;
-    std::optional<int> star_underscorecount{};
+    std::optional<int> star_count{};
     OPENAPI_JSON_CONVERT_FUNCS_DECLARE
 };
 }

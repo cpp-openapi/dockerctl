@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(ProcessConfig, privileged, user, tty, entrypoint, arguments)
 
 void ProcessConfig::ToJSON(Json & j) const

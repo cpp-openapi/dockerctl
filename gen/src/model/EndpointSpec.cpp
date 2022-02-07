@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(EndpointSpec, Mode, Ports)
 
 void EndpointSpec::ToJSON(Json & j) const

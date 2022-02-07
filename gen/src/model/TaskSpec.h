@@ -7,9 +7,8 @@
 #pragma once
 
 
-#include <string>
 #include <optional>
-#include "model_common.h"
+#include "common_json.h"
 #include "NetworkAttachmentConfig.h"
 #include "TaskSpecContainerSpec.h"
 #include "TaskSpecLogDriver.h"

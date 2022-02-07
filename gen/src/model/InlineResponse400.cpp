@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(InlineResponse400, ErrorResponse, message)
 
 void InlineResponse400::ToJSON(Json & j) const

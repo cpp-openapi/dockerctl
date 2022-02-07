@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(PluginMount, Name, Description, Settable, Source, Destination, Type, Options)
 
 void PluginMount::ToJSON(Json & j) const

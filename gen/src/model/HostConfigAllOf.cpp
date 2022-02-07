@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(HostConfigAllOf, Binds, ContainerIDFile, LogConfig, NetworkMode, PortBindings, RestartPolicy, AutoRemove, VolumeDriver, VolumesFrom, Mounts, CapAdd, CapDrop, CgroupnsMode, Dns, DnsOptions, DnsSearch, ExtraHosts, GroupAdd, IpcMode, Cgroup, Links, OomScoreAdj, PidMode, Privileged, PublishAllPorts, ReadonlyRootfs, SecurityOpt, StorageOpt, Tmpfs, UTSMode, UsernsMode, ShmSize, Sysctls, Runtime, ConsoleSize, Isolation, MaskedPaths, ReadonlyPaths)
 
 void HostConfigAllOf::ToJSON(Json & j) const

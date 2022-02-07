@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(SecretSpec, Name, Labels, Data, Driver, Templating)
 
 void SecretSpec::ToJSON(Json & j) const

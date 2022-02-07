@@ -8,16 +8,16 @@
 
 using namespace openapi;
 
-// macro should do the same job
-// OPENAP_JSON_CONVERT_FUNCS(OCIPlatform, architecture, os, osPeriodversion, osPeriodfeatures, variant)
+// macro should do the same job. Not really
+// OPENAP_JSON_CONVERT_FUNCS(OCIPlatform, architecture, os, os.version, os.features, variant)
 
 void OCIPlatform::ToJSON(Json & j) const
 {
     // OPENAPI_FOR_EACH(OPENAPI_TO_JSON_MEMBER, __VA_ARGS__)
     j.AddMember<decltype(this->architecture)>(openapi::StringT(OPENAPI_LITERAL(architecture)), this->architecture);
     j.AddMember<decltype(this->os)>(openapi::StringT(OPENAPI_LITERAL(os)), this->os);
-    j.AddMember<decltype(this->os_periodversion)>(openapi::StringT(OPENAPI_LITERAL(osPeriodversion)), this->os_periodversion);
-    j.AddMember<decltype(this->os_periodfeatures)>(openapi::StringT(OPENAPI_LITERAL(osPeriodfeatures)), this->os_periodfeatures);
+    j.AddMember<decltype(this->os_version)>(openapi::StringT(OPENAPI_LITERAL(os.version)), this->os_version);
+    j.AddMember<decltype(this->os_features)>(openapi::StringT(OPENAPI_LITERAL(os.features)), this->os_features);
     j.AddMember<decltype(this->variant)>(openapi::StringT(OPENAPI_LITERAL(variant)), this->variant);
 }
 
@@ -34,15 +34,15 @@ void OCIPlatform::FromJSON(const Json & j)
         using V = remove_optional<decltype(this->os)>::type;
         this->os = j.GetMember<V>(openapi::StringT(OPENAPI_LITERAL(os)));
     }
-    if(j.HasKey(openapi::StringT(OPENAPI_LITERAL(osPeriodversion))))
+    if(j.HasKey(openapi::StringT(OPENAPI_LITERAL(os.version))))
     {
-        using V = remove_optional<decltype(this->os_periodversion)>::type;
-        this->os_periodversion = j.GetMember<V>(openapi::StringT(OPENAPI_LITERAL(osPeriodversion)));
+        using V = remove_optional<decltype(this->os_version)>::type;
+        this->os_version = j.GetMember<V>(openapi::StringT(OPENAPI_LITERAL(os.version)));
     }
-    if(j.HasKey(openapi::StringT(OPENAPI_LITERAL(osPeriodfeatures))))
+    if(j.HasKey(openapi::StringT(OPENAPI_LITERAL(os.features))))
     {
-        using V = remove_optional<decltype(this->os_periodfeatures)>::type;
-        this->os_periodfeatures = j.GetMember<V>(openapi::StringT(OPENAPI_LITERAL(osPeriodfeatures)));
+        using V = remove_optional<decltype(this->os_features)>::type;
+        this->os_features = j.GetMember<V>(openapi::StringT(OPENAPI_LITERAL(os.features)));
     }
     if(j.HasKey(openapi::StringT(OPENAPI_LITERAL(variant))))
     {

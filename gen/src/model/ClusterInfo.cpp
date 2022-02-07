@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(ClusterInfo, ID, Version, CreatedAt, UpdatedAt, Spec, TLSInfo, RootRotationInProgress, DataPathPort, DefaultAddrPool, SubnetSize)
 
 void ClusterInfo::ToJSON(Json & j) const

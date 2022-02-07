@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(DistributionInspect, Descriptor, Platforms)
 
 void DistributionInspect::ToJSON(Json & j) const

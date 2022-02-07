@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(ImageSummary, Id, ParentId, RepoTags, RepoDigests, Created, Size, SharedSize, VirtualSize, Labels, Containers)
 
 void ImageSummary::ToJSON(Json & j) const

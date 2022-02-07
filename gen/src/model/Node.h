@@ -7,9 +7,8 @@
 #pragma once
 
 
-#include <string>
 #include <optional>
-#include "model_common.h"
+#include "common_json.h"
 #include "ManagerStatus.h"
 #include "NodeDescription.h"
 #include "NodeSpec.h"

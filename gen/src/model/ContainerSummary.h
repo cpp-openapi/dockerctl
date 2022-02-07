@@ -7,9 +7,8 @@
 #pragma once
 
 
-#include <string>
 #include <optional>
-#include "model_common.h"
+#include "common_json.h"
 #include "ContainerSummaryHostConfig.h"
 #include "ContainerSummaryNetworkSettings.h"
 #include "Mount.h"

@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(ContainerInspectResponse, Id, Created, Path, Args, State, Image, ResolvConfPath, HostnamePath, HostsPath, LogPath, Name, RestartCount, Driver, Platform, MountLabel, ProcessLabel, AppArmorProfile, ExecIDs, HostConfig, GraphDriver, SizeRw, SizeRootFs, Mounts, Config, NetworkSettings)
 
 void ContainerInspectResponse::ToJSON(Json & j) const

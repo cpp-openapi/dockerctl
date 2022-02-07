@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(SystemVersion, Platform, Components, Version, ApiVersion, MinAPIVersion, GitCommit, GoVersion, Os, Arch, KernelVersion, Experimental, BuildTime)
 
 void SystemVersion::ToJSON(Json & j) const

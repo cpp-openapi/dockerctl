@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(BuildCache, ID, Parent, Type, Description, InUse, Shared, Size, CreatedAt, LastUsedAt, UsageCount)
 
 void BuildCache::ToJSON(Json & j) const

@@ -7,9 +7,8 @@
 #pragma once
 
 
-#include <string>
 #include <optional>
-#include "model_common.h"
+#include "common_json.h"
 #include <vector>
 
 namespace openapi {
@@ -23,9 +22,9 @@ namespace openapi {
 struct OCIPlatform{
     std::optional<openapi::string_t> architecture;
     std::optional<openapi::string_t> os;
-    std::optional<openapi::string_t> os_periodversion;
+    std::optional<openapi::string_t> os_version;
     // array
-    std::vector<openapi::string_t> os_periodfeatures;
+    std::vector<openapi::string_t> os_features;
     std::optional<openapi::string_t> variant;
     OPENAPI_JSON_CONVERT_FUNCS_DECLARE
 };

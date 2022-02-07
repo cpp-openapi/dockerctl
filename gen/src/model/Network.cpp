@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(Network, Name, Id, Created, Scope, Driver, EnableIPv6, IPAM, Internal, Attachable, Ingress, Containers, Options, Labels)
 
 void Network::ToJSON(Json & j) const

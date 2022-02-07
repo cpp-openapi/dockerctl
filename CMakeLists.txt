@@ -5,6 +5,7 @@ cmake_minimum_required(VERSION 3.14)
 
 set (CMAKE_CXX_STANDARD 17)
 
+#set(OPENAPI_LOCAL_DEV ON)
 option(OPENAPI_LOCAL_DEV "Use local depenency mode for cpp-swagger" OFF)
 
 if(OPENAPI_LOCAL_DEV)
@@ -16,7 +17,7 @@ else()
   include(FetchContent)
   FetchContent_Declare(cpp_swagger
     GIT_REPOSITORY https://github.com/cpp-openapi/cpp-swagger.git
-    GIT_TAG 96d8db2024dca41598fe1f3ce008b2925291447a)
+    GIT_TAG 36a867fd73d30f9fd256dc99e9645b23fc1b4b68)
   FetchContent_GetProperties(cpp_swagger)
   if(NOT cpp_swagger_POPULATED)
     FetchContent_Populate(cpp_swagger)

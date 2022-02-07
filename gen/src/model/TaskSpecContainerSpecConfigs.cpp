@@ -8,7 +8,7 @@
 
 using namespace openapi;
 
-// macro should do the same job
+// macro should do the same job. Not really
 // OPENAP_JSON_CONVERT_FUNCS(TaskSpecContainerSpecConfigs, File, Runtime, ConfigID, ConfigName)
 
 void TaskSpecContainerSpecConfigs::ToJSON(Json & j) const

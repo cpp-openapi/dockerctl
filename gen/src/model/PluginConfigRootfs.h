@@ -7,9 +7,8 @@
 #pragma once
 
 
-#include <string>
 #include <optional>
-#include "model_common.h"
+#include "common_json.h"
 #include <vector>
 
 namespace openapi {
@@ -23,7 +22,7 @@ namespace openapi {
 struct PluginConfigRootfs{
     std::optional<openapi::string_t> type;
     // array
-    std::vector<openapi::string_t> diff_underscoreids;
+    std::vector<openapi::string_t> diff_ids;
     OPENAPI_JSON_CONVERT_FUNCS_DECLARE
 };
 }
