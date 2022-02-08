@@ -31,3 +31,40 @@ jobs:
 
     - name: CMake run tests
       run: ctest -C Debug --test-dir build
+
+    - name: upload test artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{ matrix.os }}_test-exe
+        path: ./build/examples/tests
+        retention-days: 1
+
+  test:
+    runs-on: ${{ matrix.os }}
+    needs: [build]
+    strategy:
+      matrix:
+        os: [ ubuntu-latest ] # win is not supported for now
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: download test executables
+      uses: actions/download-artifact@master
+      with:
+        name: ${{ matrix.os }}_test-exe
+        path: ./build/examples/tests
+
+    - name: make artifact executable
+      run: sudo chmod +x ./build/examples/tests/*
+    
+    - name: check docker engine
+      run: docker version
+    
+    - name: Install socat
+      run: sudo apt-get install socat
+
+    - name: Expose Docker engine
+      run: ./examples/expose.sh &
+
+    - name: run tests
+      run: ./examples/run_suite.sh

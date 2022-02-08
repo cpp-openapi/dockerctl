@@ -1,0 +1,1 @@
+* additional properties is string for now. Need to fix it to enable image list test.

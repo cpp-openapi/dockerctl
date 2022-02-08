@@ -56,3 +56,4 @@ endif()
 
 enable_testing()
 add_subdirectory(gen/src)
+add_subdirectory(examples/tests)
