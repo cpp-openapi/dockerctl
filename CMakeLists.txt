@@ -17,7 +17,7 @@ else()
   include(FetchContent)
   FetchContent_Declare(cpp_swagger
     GIT_REPOSITORY https://github.com/cpp-openapi/cpp-swagger.git
-    GIT_TAG b0631534a165080aa78bd0b1d6b8948844cf23d8)
+    GIT_TAG 06170255eb0d58ecbd89fb8d4ce1511597f0e2f3)
   FetchContent_GetProperties(cpp_swagger)
   if(NOT cpp_swagger_POPULATED)
     FetchContent_Populate(cpp_swagger)
